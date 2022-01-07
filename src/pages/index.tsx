@@ -3,6 +3,7 @@ import { Flex } from '@chakra-ui/react';
 import { Header } from '../components/Header';
 import { Banner } from '../components/Banner';
 import { ContinentCarouselModel } from '../types';
+import { TravelType } from '../components/TravelType';
 
 interface HomeProps {
   continents: ContinentCarouselModel[];
@@ -23,6 +24,7 @@ export default function Home({ continents }: HomeProps) {
       <Flex direction="column" h="100vh" w="100%" maxW={1440} mx="auto">
         <Header />
         <Banner />
+        <TravelType />
       </Flex>
     </>
   );
