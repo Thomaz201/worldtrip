@@ -5,6 +5,14 @@ export type ContinentCarouselModel = {
   callImage: string;
 };
 
+type City = {
+  id: string;
+  name: string;
+  image: string;
+  country: string;
+  code: string;
+};
+
 export type ContinentModel = {
   id: string;
   name: string;
@@ -14,12 +22,4 @@ export type ContinentModel = {
   languages: number;
   cities100: number;
   cities: City[];
-};
-
-type City = {
-  id: string;
-  name: string;
-  image: string;
-  country: string;
-  code: string;
 };

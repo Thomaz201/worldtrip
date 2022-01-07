@@ -11,7 +11,7 @@ export const Header: React.FC<HeaderProps> = ({ isContinent = false }) => {
       {isContinent && (
         <Link href="/" passHref>
           <IconButton
-            aria-label='Back to home'
+            aria-label="Back to home"
             icon={<Icon as={IoIosArrowBack} />}
             fontSize="24"
             variant="unstyled"
@@ -21,5 +21,5 @@ export const Header: React.FC<HeaderProps> = ({ isContinent = false }) => {
       )}
       <Image src="/images/logo.svg" alt="worldtrip" />
     </Flex>
-  )
-}
+  );
+};
