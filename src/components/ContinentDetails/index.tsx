@@ -1,20 +1,20 @@
 import { CircleFlag } from 'react-circle-flags';
-import { IoMdInformationCircleOutline } from 'react-icons/io';
 
 import {
   Box,
   Flex,
   Heading,
-  Icon,
   Text,
   SimpleGrid,
   Wrap,
   Image,
+  Tooltip,
   VStack,
 } from '@chakra-ui/react';
 
 import { AboutContinentItem } from './AboutContinentItem.tsx';
 import { ContinentModel } from '../../types';
+import { InfoIcon } from '../InfoIcon';
 
 interface ContinantDetailsProps {
   continent: ContinentModel;
@@ -38,7 +38,14 @@ export const ContinentDetails: React.FC<ContinantDetailsProps> = ({
           <AboutContinentItem
             number={continent.cities100}
             label="cidades +100"
-            icon={<Icon as={IoMdInformationCircleOutline} color="gray.400" />}
+            icon={
+              <Tooltip
+                hasArrow
+                label="Lista das 100 cidades com ações de maior impacto para conter a crise climática global"
+              >
+                <InfoIcon />
+              </Tooltip>
+            }
           />
         </Flex>
       </SimpleGrid>

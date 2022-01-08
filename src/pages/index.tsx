@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Flex } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
+import { AxiosResponse } from 'axios';
 import { Header } from '../components/Header';
 import { Banner } from '../components/Banner';
 import { TravelType } from '../components/TravelType';
@@ -35,7 +36,9 @@ export default function Home({ continents }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get<ContinentCarouselModel[]>('/continents');
+  const { data }: AxiosResponse = await api.get<ContinentCarouselModel[]>(
+    '/continents',
+  );
 
   return {
     props: {
