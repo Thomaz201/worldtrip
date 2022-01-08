@@ -53,9 +53,12 @@ export const ContinentDetails: React.FC<ContinantDetailsProps> = ({
       <Box>
         <Heading fontWeight="500">Cidades +100</Heading>
 
-        <Wrap spacing="2.5rem" mt="2.5rem" justify="left">
+        <Wrap spacing="2.4rem" mt="2.5rem" justify="left">
           {continent.cities.map((city) => (
-            <Box key={city.id} _hover={{ boxShadow: '2xl' }}>
+            <Box
+              key={city.id}
+              _hover={{ boxShadow: '2xl', transition: 'box-shadow 0.2s' }}
+            >
               <Image
                 src={city.image}
                 borderTopEndRadius="0.25rem"
